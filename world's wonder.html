@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <!--Icon-->
+    <link rel="icon" href="world.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+  /*Drop down button*/
+.btn {
+  background-color: #003247;
+  color: white;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+}
+.dropdown { position: absolute;display: inline-block;}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  font-size: 15px;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;font-size: 16px;}
+.dropdown:hover .dropdown-content {display: block;}
+.btn:hover{font-size: 18px;}
+/*body*/
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      
+      .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("cool-pic.webp");
+        height: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+      
+      .hero-text button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 10px 25px;
+        color: black;
+        background-color: #ddd;
+        text-align: center;
+        cursor: pointer;
+      }
+      
+      .hero-text button:hover {
+        background-color: #555;
+        color: white;
+      }
+      li {list-style-type:decimal;padding-left: 8px;}
+      .link {color: black;border-bottom: 2px #00AE9D solid;text-decoration: none;transition: all 0.5s ease;}
+      .link:hover {color:  #00AE9D;padding-bottom: 6px;}
+      p {line-height: 25px;text-align: justify;}
+      h1 {font-size: 30px;}
+      /*top button*/
+.top {
+  text-align: center;
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  width: 65px;
+  height: 50px;
+  font-weight: bold;
+  background-color: #003247;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition: all 0.05s ease;
+}
+
+.top:hover {
+ 
+  color:  #003247;
+  background-color: white ;
+  border: 1px solid  #003247;
+}
+
+      </style>
+      </head>
+      <body>
+<header style="display: flex;flex-direction: row;z-index: 100;;position:fixed;
+right: 0%;top: 0%;left: 0%;height: 50px;background-color: #003247;color: white;">
+<div class="dropdown">
+  <button class="btn" style="border-left:1px solid #003247">
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    <a href="#top">World's wonders</a>
+    <a href="#10facts">10 Shocking facts</a>
+    <a href="#fact10">Trees are breathers!</a>
+  </div>
+</div>
+<Div style="margin-left: 60px;font-size: 25px  ;font-weight: bold;
+margin-top: 8px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Xplore</Div>
+</header>
+
+        <button onclick="topFunction()" id="mybtn" class="top" title="Go to top">Top</button>
+
+    
+      <div class="hero-image">
+        <div id="top" class="hero-text">
+          <h1 class="0ne" style="font-size:50px">Wonders of the world</h1>
+          <p>interested in exlporing surprising facts about our world?</p>
+        
+        </div>
+      </div>
+      <div  style="text-align: left;margin-left: 26%;margin-right: 25%;color:  #003247;;"> 
+        <div id="10facts">   
+        <h2  style="font-size: 45px;">10 Earth Shocking facts!</h2>
+      <ol style="text-align: left;line-height: 40px;margin-bottom: 100px;">
+        <li><a class="link" href="#fact1">Earth isn’t actually round</a></li>
+        <li><a class="link" href="#fact2">Coral reefs are Earth’s largest living structure</a> </li>
+        <li><a class="link" href="#fact3">Earth has a squishy interior</a></li>
+       <li><a class="link" href="#fact4">Antarctica is home to the largest ice sheet on Earth</a></li>
+       <li><a class="link" href="#fact5">he Moon is drifting away from Earth</a></li>
+       <li> <a class="link" href="#fact6">Atacama is the driest place on Earth</a></li>
+       <li><a class="link" href="#fact7">Earth’s magnetic pole is creeping westward</a></li>
+       <li><a class="link" href="#fact8">Europe is the second smallest continent in size but the third largest in population</a></li>
+       <li><a class="link" href="#fact9">Tibetan plateau is Earth’s ‘third pole’</a></li>
+       <li><a class="link" href="#fact10">rees are breathers</a></ol></li></div> 
+
+       <div id="fact1">
+        <h1>1. Earth isn’t actually round</h1>
+        <p>       While this sounds like an elaborate joke, we’re actually serious. Earth isn’t flat, 
+        but it’s not perfectly round either. Earth’s rotation causes the planet to bulge at the equator 
+        and flatten at the poles, while the distribution of mass on Earth (which is not perfectly uniform) 
+        causes small variations in the gravitational pull at different locations on the planet. These 
+        variations are too small to be seen in pictures of Earth from space, so it appears round to the
+         human eye. 
+        </p> </div>
+
+      <div id="fact2">
+  <h1>2. Coral reefs are Earth’s largest living structure</h1>
+  <p>Coral reefs are not only beautiful natural wonders, but also the largest living structure on Earth.
+    These underwater ecosystems are made up of colonies of tiny animals called coral polyps, which build calcium carbonate skeletons that accumulate over time and form the complex structures we know as coral reefs. 
+    
+    Coral reefs are incredibly diverse and play a vital role in the ocean ecosystem, providing habitat and protection for many species, and acting as a natural barrier that helps to protect coastlines from storms and erosion.  
+    Unfortunately, coral reefs are under threat from a range of environmental factors, including ocean acidification, rising temperatures and global warming.ssues and provide them with food. Coral bleaching can lead to the death of the coral, which can have knock-on effects on the wider ecosystem. 
+    
+    </p>
+
+      </div>
+      <div id="fact3">
+        <h1>3. Earth has a squishy interior</h1>
+        <p>Earth’s interior is not solid, but rather has a semi-solid or ‘squishy’ consistency owing to high temperatures and pressures. This squishy consistency allows the mantle to flow and move over geological timescales, which is responsible for phenomena such as plate tectonics, volcanic activity and earthquakes. 
+
+          One consequence of this squishy interior is a process known as post-glacial rebound. During the last ice age, large portions of Earth's surface were covered by glaciers, causing the underlying mantle to deform and sink. As the glaciers melted and receded, the mantle slowly rebounded back to its original position over thousands of years, causing the land above it to rise. 
+          
+          This process is still occurring today in places such as Canada, Scandinavia, and Greenland, where the land is still rebounding from the weight of the glaciers that once covered the region. cales. 
+             
+</p>
+        </div>
+      
+      <div id="fact4">
+          <h1>4. Antarctica is home to the largest ice sheet on Earth 
+          </h1>
+              <p>
+                More than six times as large as Greenland, Antarctica is the southernmost continent and is the coldest and windiest place on Earth – with temperatures that can drop as low as -89.2°C and winds that can exceed 320 km per hour. 
+
+Antarctica is home to the largest ice sheet on Earth, containing a staggering 30 million cubic kilometres of ice. This represents an incredible 70% of Earth's freshwater and 90% of its ice. As a result, changes to the Antarctic ice sheet can have significant implications for global sea levels and ocean currents. 
+
+
+Monitoring the Antarctic ice sheet is therefore of paramount importance and satellite data plays a crucial role in this effort.
+                </p>
+            </div>
+            
+  <div id="fact5">
+           <h1>    5. The Moon is drifting away from Earth</h1>
+            <p>You read that correctly! The Moon is gradually drifting away from Earth at a rate of approximately 4 cm per year. This phenomenon is caused by the Moon pulling on Earth’s oceans creating tidal forces that produce a bulge of water on the side of Earth facing the Moon.  
+
+
+              This bulge in turn creates a gravitational pull on the Moon, causing it to accelerate slightly and move further away from Earth. Over time, this process has caused the Moon to move farther away from Earth each year. 
+              
+              This gradual drift is not noticeable on a day-to-day basis, but over millions of years, it can have significant<br><br> effects on Earth's rotation. 
+              
+              Today, most scientists believe the Moon is ‘Earth's child’ – a large body collided with Earth, destroying our planet’s mantle and sending material into orbit from which the Moon formed. This ‘big splash’ theory would explain why the Moon’s rocks are similar to those on Earth.
+              
+              Bonus fun fact: Australia is actually wider than the Moon. The Moon sits at 3400 km in diameter, while Australia’s diameter from east to west is almost 4000 km. The Moon, as a sphere, has more surface area, but it’s still pretty impressive. 
+              </p>
+                  
+      </div>
+
+       <div id="fact6">
+      <h1>6. Atacama is the driest place on Earth</h1>
+      <p>The Atacama Desert, located in South America, is widely considered to be the driest place on Earth, outside of the Antarctic dry valleys. This vast expanse of land spans over 100 000 sq km and receives an average of less than 1 mm of rainfall per year.
+
+  
+      The harsh climate of the Atacama is due to a combination of factors including its location in a rain shadow caused by the Andes mountains, the presence of the cold Humboldt Current offshore and a lack of moisture-bearing winds.  
+      </p>
+                        
+        </div>
+       
+      <div id="fact7">
+        <h1> 7. Earth’s magnetic pole is creeping westward</h1>
+        <p>Unlike our geographic North Pole, which is in a fixed location, Earth’s magnetic north wanders. Until the early 1990s, the magnetic North Pole was known to lie some 1600 km south of true north, in Canada. Yet scientists realised that the location of magnetic north wasn’t fixed and was drifting at a rate of 15 km a year. Since the 1990s, however, the drift of Earth’s magnetic pole has turned into more of a sprint.  
+
+          Its present speed is around 50-60 km a year and is making a dash towards Siberia at a pace not seen before.th’s core, deep within the Earth, to be stretched out. This has weakened the Canadian patch and resulted in the pole shifting towards Siberia.
+          </p>
+            
+        </div>
+      <div id="fact8">
+        <h1> 8. Europe is the second smallest continent in size but the third largest in population
+        </h1>
+        <p>Europe is known for its diverse cultures, rich history and stunning landmarks. Despite being the second smallest continent in size (after Australia), Europe is home to a staggering population of over 746 million people, making it the third largest continent in terms of population (after Asia and Africa). 
+
+          Europe has one of the highest levels of urbanisation in the world, with over 75% of its population living in urban areas. With the world’s population expected to reach 9.7 billion in 2050, we must increase efforts to understand and mitigate the challenges brought by rapid and unplanned urbanisation, air pollution, as well as issues related to the management of water and energy. 
+          
+            </p>
+      
+        </div>
+        <div id="fact9">
+          <h1> 9. Tibetan plateau is Earth’s ‘third pole’
+          </h1>
+          <p>The Tibetan Plateau is often referred to as the 'third pole' owing to the amount of freshwater it contains. With over 46 000 glaciers, the Tibetan Plateau holds the largest reserve of freshwater outside of the North and South Poles.  
+
+            These glaciers feed the rivers that run through the region, including the Mekong, Yangtze, and Yellow River, providing a vital source of water for millions of people in China and Southeast Asia.  
+            
+            The Tibetan Plateau's glaciers, along with other glaciers around the world, are under threat from climate change. Rising temperatures are causing the glaciers to melt at an unprecedented rate, which could have devastating consequences for the people and ecosystems that depend on them. 
+            
+                </p>
+        
+          </div>
+          <div id="fact10">
+            <h1>10. Trees are breathers</h1>
+            <p>Trees are one of the most effective tools we have to combat climate change. Forests are home to around 80% of biodiversity on land and tropical forests alone produce over 40% of the oxygen we breathe.  
+
+              Covering around 30% of Earth’s land surface, we depend on forests for our survival. Forests absorb around 8 Gigatonnes a year of carbon dioxide from the atmosphere and play a crucial role in the carbon cycle and climate system.   
+              
+              However, climate change, forest degradation and deforestation are causing much of this stored carbon to be released back into the atmosphere. Recent research found that recovering tropical forests were only successfully combatting a quarter of the current carbon emissions and indicates the importance of preserving and restoring our tropical forests.
+              
+              </p>
+          
+            </div>
+     </div>
+     
+     <script>
+      // Get the button
+      let mybutton = document.getElementById("mybtn");
+      
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+      
+      function scrollFunction() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+      
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
+ 
+    
+</body>
+</html>
